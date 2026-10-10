@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وصّلها | شركة توصيل الطلبات الأولى في السعودية</title>
+<meta name="description" content="وصّلها - أسرع شركة توصيل طلبات في المملكة العربية السعودية. توصيل مطاعم، بقالة، طرود، صيدليات خلال دقائق.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛵</text></svg>">
+</head>
+<body>
+
+<!-- الشريط العلوي -->
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="topbar-right">
+      <span><i class="fa-solid fa-phone"></i> <bdi dir="ltr">920 001 234</bdi></span>
+      <span class="hide-mobile"><i class="fa-solid fa-clock"></i> نخدمكم 24/7 في جميع المدن</span>
+    </div>
+    <div class="topbar-left">
+      <span><i class="fa-solid fa-location-dot"></i> الرياض، جدة، الدمام، مكة، المدينة والمزيد</span>
+    </div>
+  </div>
+</div>
+
+<!-- الهيدر -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <span class="logo-icon"><i class="fa-solid fa-motorcycle"></i></span>
+      <span class="logo-text">وصّلها<small>WASSILHA</small></span>
+    </a>
+    <nav class="nav" id="navMenu">
+      <a href="#home" class="active">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#how">كيف نعمل</a>
+      <a href="#pricing">الأسعار</a>
+      <a href="#cities">مدن التغطية</a>
+      <a href="#contact">تواصل معنا</a>
+      <a href="#order" class="btn btn-primary nav-cta">اطلب الآن</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#order" class="btn btn-primary hide-mobile">اطلب الآن</a>
+      <button class="menu-btn" id="menuBtn" aria-label="القائمة"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- الواجهة الرئيسية -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <span class="badge"><i class="fa-solid fa-bolt"></i> الأسرع في المملكة • توصيل خلال 30 دقيقة</span>
+      <h1>طلبك يوصل <span class="highlight">لباب بيتك</span> بسرعة البرق ⚡</h1>
+      <p>من المطاعم والبقالة والصيدليات إلى الطرود والهدايا — فريق وصّلها يغطي أكثر من 25 مدينة سعودية على مدار الساعة، مع تتبع مباشر وضمان الجودة.</p>
+      <div class="hero-btns">
+        <a href="#order" class="btn btn-primary btn-lg"><i class="fa-solid fa-cart-shopping"></i> اطلب توصيل الآن</a>
+        <a href="#how" class="btn btn-outline btn-lg"><i class="fa-solid fa-play"></i> كيف نعمل؟</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avatars">
+          <span>م</span><span>س</span><span>ع</span><span>+</span>
+        </div>
+        <div>
+          <div class="stars">★★★★★ <b>4.9</b></div>
+          <small>+120,000 عميل سعيد يثق فينا</small>
+        </div>
+        <div class="hero-mini-stats">
+          <div><b data-count="25">0</b><small>مدينة</small></div>
+          <div><b data-count="850">0</b><small>مندوب</small></div>
+          <div><b data-count="98">0</b><small>% رضا</small></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card" id="order">
+      <div class="order-card">
+        <h3><i class="fa-solid fa-box-open"></i> احسب سعر التوصيل</h3>
+        <p class="muted">شفافية كاملة — بدون رسوم خفية</p>
+        <label>نوع الطلب</label>
+        <div class="chips" id="typeChips">
+          <button class="chip active" data-price="12">🍔 مطعم</button>
+          <button class="chip" data-price="15">🛒 بقالة</button>
+          <button class="chip" data-price="18">📦 طرد</button>
+          <button class="chip" data-price="14">💊 صيدلية</button>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>من</label>
+            <select id="fromCity">
+              <option>الرياض - العليا</option>
+              <option>جدة - الروضة</option>
+              <option>الدمام - الشاطئ</option>
+              <option>مكة - العزيزية</option>
+              <option>المدينة - قباء</option>
+            </select>
+          </div>
+          <div>
+            <label>المسافة (كم)</label>
+            <input type="range" id="distance" min="1" max="30" value="5">
+            <span class="range-val"><b id="distVal">5</b> كم</span>
+          </div>
+        </div>
+        <label>رقم الجوال</label>
+        <input type="tel" id="phoneInput" placeholder="05xxxxxxxx" maxlength="10" inputmode="numeric">
+        <div class="price-box">
+          <div>
+            <small>السعر التقديري</small>
+            <div class="price"><span id="priceOut">19</span> ر.س</div>
+          </div>
+          <div class="price-time"><i class="fa-solid fa-stopwatch"></i> <span id="timeOut">25-35</span> دقيقة</div>
+        </div>
+        <button class="btn btn-accent btn-block" id="orderBtn"><i class="fa-solid fa-motorcycle"></i> تأكيد الطلب الآن</button>
+        <div class="track-box">
+          <input type="text" id="trackInput" placeholder="رقم التتبع: مثال WS-12345">
+          <button id="trackBtn">تتبع</button>
+        </div>
+        <div id="trackResult" class="track-result"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-strip">
+    <div class="container strip-inner">
+      <span><i class="fa-brands fa-apple-pay"></i> مدى</span>
+      <span><i class="fa-brands fa-cc-visa"></i> فيزا</span>
+      <span><i class="fa-solid fa-wallet"></i> Apple Pay</span>
+      <span><i class="fa-solid fa-shield-halved"></i> دفع آمن 100%</span>
+      <span><i class="fa-solid fa-truck-fast"></i> تتبع مباشر GPS</span>
+    </div>
+  </div>
+</section>
+
+<!-- مميزات سريعة -->
+<section class="features">
+  <div class="container grid-4">
+    <div class="f-card"><i class="fa-solid fa-bolt"></i><h4>توصيل 30 دقيقة</h4><p>أو التوصيل القادم مجاني</p></div>
+    <div class="f-card"><i class="fa-solid fa-headset"></i><h4>دعم 24/7</h4><p>بالعربية والإنجليزية والأوردو</p></div>
+    <div class="f-card"><i class="fa-solid fa-shield-heart"></i><h4>تغليف آمن</h4><p>ضمان سلامة طلبك وحرارته</p></div>
+    <div class="f-card"><i class="fa-solid fa-money-bill-wave"></i><h4>الدفع عند الاستلام</h4><p>كاش أو شبكة أو إلكتروني</p></div>
+  </div>
+</section>
+
+<!-- الخدمات -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">خدماتنا</span>
+      <h2>كل اللي تحتاجه.. <span>نوصّله لك</span></h2>
+      <p>منظومة توصيل متكاملة للأفراد والمطاعم والمتاجر والشركات</p>
+    </div>
+    <div class="grid-3">
+      <div class="s-card">
+        <div class="s-icon c1"><i class="fa-solid fa-burger"></i></div>
+        <h3>توصيل المطاعم</h3>
+        <p>من +2000 مطعم شريك. أكل حار وطازج مع تتبع لحظي للمندوب.</p>
+        <a href="#order">اطلب الآن ←</a>
+      </div>
+      <div class="s-card">
+        <div class="s-icon c2"><i class="fa-solid fa-cart-flatbed"></i></div>
+        <h3>البقالة والمقاضي</h3>
+        <p>كل احتياجات البيت من العثيم وكارفور والتميمي لباب البيت.</p>
+        <a href="#order">اطلب الآن ←</a>
+      </div>
+      <div class="s-card">
+        <div class="s-icon c3"><i class="fa-solid fa-boxes-packing"></i></div>
+        <h3>شحن الطرود</h3>
+        <p>استلم وأرسل طرودك بين المدن بضمان التغليف والتأمين الكامل.</p>
+        <a href="#order">اطلب الآن ←</a>
+      </div>
+      <div class="s-card">
+        <div class="s-icon c4"><i class="fa-solid fa-pills"></i></div>
+        <h3>الصيدليات</h3>
+        <p>أدويتك ومستلزماتك الصحية بتوصيل سري وسري تام للخصوصية.</p>
+        <a href="#order">اطلب الآن ←</a>
+      </div>
+      <div class="s-card">
+        <div class="s-icon c5"><i class="fa-solid fa-gift"></i></div>
+        <h3>الهدايا والورود</h3>
+        <p>فاجئ من تحب مع تغليف هدايا فاخر وبطاقة إهداء مجانية.</p>
+        <a href="#order">اطلب الآن ←</a>
+      </div>
+      <div class="s-card highlight-card">
+        <div class="s-icon c6"><i class="fa-solid fa-building"></i></div>
+        <h3>حلول الأعمال</h3>
+        <p>أسطول توصيل متكامل لمطعمك أو متجرك مع لوحة تحكم و API.</p>
+        <a href="#pricing">اكتشف الباقات ←</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- كيف نعمل -->
+<section class="section alt" id="how">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">خطوات سهلة</span>
+      <h2>كيف تطلب مع <span>وصّلها؟</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="step-num">1</span><i class="fa-solid fa-mobile-screen"></i><h4>اختر طلبك</h4><p>من التطبيق أو الموقع أو واتساب</p></div>
+      <div class="step-line"></div>
+      <div class="step"><span class="step-num">2</span><i class="fa-solid fa-user-check"></i><h4>نعيّن أقرب مندوب</h4><p>خلال 60 ثانية بتقنية الذكاء الاصطناعي</p></div>
+      <div class="step-line"></div>
+      <div class="step"><span class="step-num">3</span><i class="fa-solid fa-map-location-dot"></i><h4>تتبع مباشر</h4><p>شاهد مندوبك يتحرك على الخريطة لحظة بلحظة</p></div>
+      <div class="step-line"></div>
+      <div class="step"><span class="step-num">4</span><i class="fa-solid fa-house-chimney"></i><h4>استلم طلبك</h4><p>ادفع بالطريقة اللي تناسبك وقيّم التجربة</p></div>
+    </div>
+    <div class="cta-banner">
+      <div>
+        <h3>حمّل تطبيق وصّلها واحصل على <span>خصم 50%</span> على أول 3 طلبات 🎉</h3>
+        <p>استخدم كود: <b class="coupon" id="couponCode">AHLAN50 <button id="copyCoupon" title="نسخ"><i class="fa-regular fa-copy"></i></button></b></p>
+        <div class="store-btns">
+          <a href="#" class="store"><i class="fa-brands fa-apple"></i><span><small>حمّله من</small>App Store</span></a>
+          <a href="#" class="store"><i class="fa-brands fa-google-play"></i><span><small>احصل عليه على</small>Google Play</span></a>
+        </div>
+      </div>
+      <div class="phone-mock">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="app-header">🛵 وصّلها</div>
+            <div class="app-order"><b>طلبك في الطريق!</b><small>الكابتن محمد • 5 دقائق ويوصل</small><div class="progress"><span></span></div></div>
+            <div class="app-items"><span>🍔 برجر</span><span>🍕 بيتزا</span><span>🥤 عصير</span></div>
+            <div class="app-btn">تتبع المندوب</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- إحصائيات -->
+<section class="stats">
+  <div class="container grid-4">
+    <div><b><span data-count="1200000">0</span>+</b><p>طلب تم توصيله</p></div>
+    <div><b><span data-count="25">0</span>+</b><p>مدينة نغطيها</p></div>
+    <div><b><span data-count="2000">0</span>+</b><p>مطعم ومتجر شريك</p></div>
+    <div><b>4.9 ★</b><p>تقييم عملائنا</p></div>
+  </div>
+</section>
+
+<!-- المدن -->
+<section class="section" id="cities">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">تغطيتنا</span>
+      <h2>نوصل في <span>مدينتك</span> 📍</h2>
+      <p>نتوسع كل شهر — وهذه أبرز المدن التي نخدمها الآن</p>
+    </div>
+    <div class="city-grid">
+      <div class="city"><i class="fa-solid fa-location-dot"></i><div><h4>الرياض</h4><small>توصيل خلال 25 دقيقة</small></div><span class="online"></span></div>
+      <div class="city"><i class="fa-solid fa-location-dot"></i><div><h4>جدة</h4><small>توصيل خلال 30 دقيقة</small></div><span class="online"></span></div>
+      <div class="city"><i class="fa-solid fa-location-dot"></i><div><h4>الدمام والخبر</h4><small>توصيل خلال 30 دقيقة</small></div><span class="online"></span></div>
+      <div class="city"><i class="fa-solid fa-location-dot"></i><div><h4>مكة المكرمة</h4><small>توصيل خلال 35 دقيقة</small></div><span class="online"></span></div>
+      <div class="city"><i class="fa-solid fa-location-dot"></i><div><h4>المدينة المنورة</h4><small>توصيل خلال 35 دقيقة</small></div><span class="online"></span></div>
+      <div class="city"><i class="fa-solid fa-location-dot"></i><div><h4>أبها وخميس مشيط</h4><small>توصيل خلال 40 دقيقة</small></div><span class="online"></span></div>
+      <div class="city"><i class="fa-solid fa-location-dot"></i><div><h4>تبوك</h4><small>توصيل خلال 40 دقيقة</small></div><span class="online"></span></div>
+      <div class="city more"><h4>+18 مدينة أخرى</h4><a href="#contact">مدينتك مو موجودة؟ بلغنا ←</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- الأسعار -->
+<section class="section alt" id="pricing">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">باقات شفافة</span>
+      <h2>أسعار <span>تناسب الجميع</span></h2>
+      <p>بدون اشتراكات معقدة — ادفع فقط مقابل ما تستخدمه</p>
+    </div>
+    <div class="grid-3">
+      <div class="p-card">
+        <h3>أفراد</h3>
+        <p class="muted">للطلبات اليومية</p>
+        <div class="p-price"><b>12</b> ر.س <small>/ يبدأ من</small></div>
+        <ul><li>✔ توصيل حتى 5 كم</li><li>✔ تتبع مباشر</li><li>✔ دفع متعدد</li><li>✔ دعم واتساب</li></ul>
+        <a href="#order" class="btn btn-outline btn-block">اطلب الآن</a>
+      </div>
+      <div class="p-card popular">
+        <span class="pop-badge">الأكثر طلباً 🔥</span>
+        <h3>المطاعم والمتاجر</h3>
+        <p class="muted">نموّ مبيعاتك 3 أضعاف</p>
+        <div class="p-price"><b>299</b> ر.س <small>/ شهرياً</small></div>
+        <ul><li>✔ طلبات غير محدودة</li><li>✔ عمولة 0% أول شهر</li><li>✔ لوحة تحكم + تقارير</li><li>✔ مدير حساب خاص</li><li>✔ تسويق مجاني داخل التطبيق</li></ul>
+        <a href="#contact" class="btn btn-primary btn-block">سجّل متجرك</a>
+      </div>
+      <div class="p-card">
+        <h3>الشركات والأساطيل</h3>
+        <p class="muted">حلول لوجستية مخصصة</p>
+        <div class="p-price"><b>تواصل</b> <small>عرض سعر خاص</small></div>
+        <ul><li>✔ API للربط مع أنظمتك</li><li>✔ مناديب مخصصون بزيّك</li><li>✔ تغطية بين المدن</li><li>✔ فواتير وتقارير شهرية</li></ul>
+        <a href="#contact" class="btn btn-outline btn-block">اطلب عرض سعر</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- آراء العملاء -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">قالوا عنا</span>
+      <h2>قصص <span>عملائنا السعيدة</span> 💚</h2>
+    </div>
+    <div class="slider-wrap">
+      <div class="slider" id="slider">
+        <div class="t-card"><div class="stars">★★★★★</div><p>"أسرع توصيل جربته في الرياض! الأكل وصل حار والمندوب محترم جداً. صرت زبون دائم."</p><div class="t-user"><span class="t-av">ن</span><div><b>نورة العتيبي</b><small>الرياض • 45 طلب</small></div></div></div>
+        <div class="t-card"><div class="stars">★★★★★</div><p>"أطلب مقاضي البيت كل أسبوع وتوصل مرتبة ومغلفة. وفروا علي مشاوير كثيرة الله يعطيهم العافية."</p><div class="t-user"><span class="t-av">أ</span><div><b>أبو فهد</b><small>جدة • 80 طلب</small></div></div></div>
+        <div class="t-card"><div class="stars">★★★★★</div><p>"كصاحب مطعم، وصّلها رفعت مبيعاتي 200%. لوحة التحكم سهلة والدعم يرد بسرعة."</p><div class="t-user"><span class="t-av">خ</span><div><b>خالد الشمري</b><small>مطعم برجر هاوس، الدمام</small></div></div></div>
+        <div class="t-card"><div class="stars">★★★★★</div><p>"طلبت دواء لوالدتي الساعة 2 الفجر ووصل خلال 20 دقيقة. خدمة تنقذ فعلاً."</p><div class="t-user"><span class="t-av">ر</span><div><b>ريم القحطاني</b><small>مكة • 30 طلب</small></div></div></div>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- انضم كمندوب -->
+<section class="driver">
+  <div class="container driver-grid">
+    <div>
+      <span class="sec-tag light">فرصة دخل</span>
+      <h2>صِر مندوب وصّلها وحقّق حتى <span>8,000 ر.س</span> شهرياً 🛵</h2>
+      <ul class="check-list">
+        <li>✔ دوام مرن — اشتغل متى ما تبغى</li>
+        <li>✔ حوافز يومية وبونص الذروة</li>
+        <li>✔ تأمين طبي وحوادث شامل</li>
+        <li>✔ التسجيل خلال 24 ساعة فقط بالهوية والإقامة</li>
+      </ul>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-accent btn-lg">قدّم كمندوب</a>
+        <a href="#" class="btn btn-ghost btn-lg">حمّل دليل المناديب</a>
+      </div>
+    </div>
+    <div class="driver-card">
+      <h3>💰 حاسبة أرباح المناديب</h3>
+      <label>عدد الطلبات يومياً: <b id="ordersVal">15</b></label>
+      <input type="range" id="ordersRange" min="5" max="40" value="15">
+      <div class="earn-box"><small>دخلك الشهري المتوقع</small><b><span id="earnOut">6,750</span> ر.س</b></div>
+      <small class="muted">* شامل الحوافز الأساسية، قد يزيد في المواسم</small>
+    </div>
+  </div>
+</section>
+
+<!-- الأسئلة -->
+<section class="section" id="faq">
+  <div class="container narrow">
+    <div class="sec-head">
+      <span class="sec-tag">عندك سؤال؟</span>
+      <h2>الأسئلة <span>الشائعة</span></h2>
+    </div>
+    <div class="faq">
+      <div class="faq-item open"><button>كم تستغرق مدة التوصيل؟ <i class="fa-solid fa-chevron-down"></i></button><div class="faq-body"><p>داخل المدن الرئيسية من 25 إلى 35 دقيقة. إذا تأخرنا عن 60 دقيقة، طلبك القادم علينا مجاناً.</p></div></div>
+      <div class="faq-item"><button>ما هي طرق الدفع المتاحة؟ <i class="fa-solid fa-chevron-down"></i></button><div class="faq-body"><p>مدى، فيزا، ماستركارد، Apple Pay، STC Pay، والدفع نقداً عند الاستلام.</p></div></div>
+      <div class="faq-item"><button>هل تغطون مدينتي؟ <i class="fa-solid fa-chevron-down"></i></button><div class="faq-body"><p>نغطي 25+ مدينة ونضيف مدناً جديدة شهرياً. تواصل معنا وسنبلغك فور توفر الخدمة لديك.</p></div></div>
+      <div class="faq-item"><button>كيف أتتبع طلبي؟ <i class="fa-solid fa-chevron-down"></i></button><div class="faq-body"><p>ستصلك رسالة برقم التتبع، أدخله أعلى الصفحة أو في التطبيق لمشاهدة موقع المندوب مباشرة.</p></div></div>
+      <div class="faq-item"><button>كيف أسجّل مطعمي أو متجري؟ <i class="fa-solid fa-chevron-down"></i></button><div class="faq-body"><p>عبّئ نموذج التواصل بالأسفل أو واتساب على 920001234، وسنتواصل معك خلال ساعات العمل لتفعيل حسابك مجاناً.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- تواصل -->
+<section class="section alt" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <span class="sec-tag">تواصل معنا</span>
+      <h2>جاهزين نخدمك في <span>أي وقت</span></h2>
+      <p class="muted">فريقنا يرد خلال دقائق — اتصل، راسلنا واتساب، أو عبّئ النموذج</p>
+      <div class="contact-cards">
+        <a href="tel:920001234" class="c-card"><i class="fa-solid fa-phone"></i><div><b dir="ltr">920 001 234</b><small>اتصال مجاني 24/7</small></div></a>
+        <a href="#" class="c-card"><i class="fa-brands fa-whatsapp"></i><div><b>واتساب مباشر</b><small>رد خلال 5 دقائق</small></div></a>
+        <a href="mailto:salam@wassilha.sa" class="c-card"><i class="fa-solid fa-envelope"></i><div><b>salam@wassilha.sa</b><small>للشراكات والأعمال</small></div></a>
+      </div>
+      <div class="socials">
+        <a href="#" aria-label="تويتر"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="انستقرام"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="تيك توك"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" aria-label="سناب"><i class="fa-brands fa-snapchat"></i></a>
+        <a href="#" aria-label="لينكدإن"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+    <form class="contact-form" id="contactForm">
+      <h3>أرسل رسالتك ✉️</h3>
+      <div class="form-row">
+        <input type="text" id="cName" placeholder="الاسم الكريم *" required>
+        <input type="tel" id="cPhone" placeholder="رقم الجوال *" required>
+      </div>
+      <select id="cType"><option>استفسار عام</option><option>تسجيل مطعم / متجر</option><option>التقديم كمندوب</option><option>شكوى أو اقتراح</option><option>شراكات الشركات</option></select>
+      <textarea id="cMsg" rows="4" placeholder="اكتب رسالتك هنا... *" required></textarea>
+      <button class="btn btn-primary btn-block" type="submit"><i class="fa-solid fa-paper-plane"></i> إرسال الرسالة</button>
+      <small class="muted center">بالضغط على إرسال أنت توافق على سياسة الخصوصية</small>
+    </form>
+  </div>
+</section>
+
+<!-- فوتر -->
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="#" class="logo light"><span class="logo-icon"><i class="fa-solid fa-motorcycle"></i></span><span class="logo-text">وصّلها<small>WASSILHA</small></span></a>
+      <p>شركة سعودية 100% بترخيص وزارة النقل، نوصل السعادة لباب بيتك منذ 2021.</p>
+      <p class="cr">سجل تجاري 1234567890 • الرقم الضريبي 300123456700003</p>
+    </div>
+    <div><h4>روابط سريعة</h4><a href="#services">خدماتنا</a><a href="#pricing">الأسعار</a><a href="#cities">المدن</a><a href="#faq">الأسئلة الشائعة</a></div>
+    <div><h4>لشركائنا</h4><a href="#">سجّل مطعمك</a><a href="#">كن مندوباً</a><a href="#">حلول الشركات</a><a href="#">الوظائف</a></div>
+    <div><h4>حمّل التطبيق</h4><div class="store-btns small"><a href="#" class="store dark"><i class="fa-brands fa-apple"></i> App Store</a><a href="#" class="store dark"><i class="fa-brands fa-google-play"></i> Google Play</a></div></div>
+  </div>
+  <div class="footer-bottom"><div class="container">© 2026 وصّلها لجميع الحقوق محفوظة • صنع بحب في السعودية 🇸🇦</div></div>
+</footer>
+
+<!-- أزرار عائمة -->
+<a href="#" class="float-wa" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+<button class="to-top" id="toTop" aria-label="للأعلى"><i class="fa-solid fa-arrow-up"></i></button>
+<div class="toast" id="toast"></div>
+<nav class="mobile-bar">
+  <a href="#home" class="active"><i class="fa-solid fa-house"></i><small>الرئيسية</small></a>
+  <a href="#order"><i class="fa-solid fa-cart-shopping"></i><small>اطلب</small></a>
+  <a href="#pricing"><i class="fa-solid fa-tags"></i><small>الأسعار</small></a>
+  <a href="#contact"><i class="fa-solid fa-headset"></i><small>تواصل</small></a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
