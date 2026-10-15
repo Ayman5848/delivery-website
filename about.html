@@ -10,7 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <link rel="stylesheet" href="style.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛵</text></svg>">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#078643">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="وصّلها">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
 </head>
 <body>
 
@@ -177,6 +184,12 @@
 <a href="#" class="float-wa" aria-label="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
 <button class="to-top" id="toTop" aria-label="للأعلى"><i class="fa-solid fa-arrow-up"></i></button>
 <div class="toast" id="toast"></div>
+<div class="install-banner" id="installBanner" hidden>
+  <span class="install-icon">🛵</span>
+  <div><b>ثبّت تطبيق وصّلها</b><small>وصول أسرع + يعمل بدون إنترنت</small></div>
+  <button class="btn btn-accent" id="installBtn">تثبيت</button>
+  <button class="install-x" id="dismissInstall" aria-label="إغلاق">✕</button>
+</div>
 <nav class="mobile-bar">
   <a href="index.html"><i class="fa-solid fa-house"></i><small>الرئيسية</small></a>
   <a href="about.html" class="active"><i class="fa-solid fa-circle-info"></i><small>من نحن</small></a>
@@ -192,5 +205,6 @@ const toTop=document.getElementById('toTop');
 window.addEventListener('scroll',()=>{document.getElementById('header').classList.toggle('shadow',scrollY>10);toTop.classList.toggle('show',scrollY>600);});
 toTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 </script>
+<script src="pwa.js"></script>
 </body>
 </html>
